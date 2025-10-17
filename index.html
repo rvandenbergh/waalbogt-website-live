@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Redirecting…</title>
+
+  <!-- instant client-side redirect -->
+  <meta http-equiv="refresh" content="0;url=https://waalbocht.nl">
+
+  <!-- Friendly fallback & ensure history replacement -->
+  <script>
+    // Use replace() so the redirect target doesn't create an extra history entry.
+    (function () {
+      var target = "https://waalbocht.nl";
+      try {
+        // Prefer location.replace for clean history navigation
+        window.location.replace(target);
+      } catch (e) {
+        // last-resort assignment
+        window.location = target;
+      }
+    })();
+  </script>
+
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; 
+           display:flex; align-items:center; justify-content:center; height:100vh; margin:0;
+           background:#f8fafc; color:#0f172a; }
+    .box { text-align:center; max-width:36rem; padding:1.5rem; border-radius:12px; 
+          box-shadow: 0 6px 20px rgba(2,6,23,0.08); background: white; }
+    a { color: #0366d6; word-break:break-all; }
+  </style>
+</head>
+<body>
+  <div class="box" role="status" aria-live="polite">
+    <h1>Redirecting…</h1>
+    <p>Wanneer je niet automatisch op de Waalbocht site tercht komt, <a href="https://waalbocht.nl">klik hier om door te gaan</a>.</p>
+    <p><small>Target: <a href="https://waalbocht.nl">https://waalbocht.nl</a></small></p>
+  </div>
+</body>
+</html>
